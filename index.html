@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aman Soni Portfolio</title>
+
+  <!-- Devicon + FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <script src="https://kit.fontawesome.com/2d5bfa772d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">Aman Soni</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="toggle-btn">🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="profile-3d">
+        <div class="photo-wrap">
+          <img src="profile.jpg" alt="Aman Soni" class="profile-photo" />
+          <div class="glow-ring"></div>
+        </div>
+        <div class="hero-text">
+          <h1 class="glow">Aman Soni</h1>
+          <p class="subtitle">Full Stack Developer • MERN + PHP</p>
+          <a class="cta" href="#projects">See My Work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="card hidden">
+      <h2>About Me</h2>
+      <p>
+        Hi — I'm <strong>Aman Soni</strong>, an MCA student at Dr. Hari Singh Gour Central University, Sagar (M.P.).  
+        I’m passionate about web development and love building interactive, user-friendly applications.  
+        My key skills include Frontend Development, JavaScript, PHP, and the MERN Stack (MongoDB, Express.js, React.js, Node.js).  
+        <br><br>
+        🌱 Currently learning: Advanced React and backend integration  
+        🚀 Goal: To become a full-stack developer and contribute to innovative tech solutions.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card hidden">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-card">
+          <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-card">
+          <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-card">
+          <i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
+        </a>
+        <a href="https://react.dev/" target="_blank" class="skill-card">
+          <i class="devicon-react-original colored"></i><span>React</span>
+        </a>
+        <a href="https://nodejs.org/" target="_blank" class="skill-card">
+          <i class="devicon-nodejs-plain colored"></i><span>Node.js</span>
+        </a>
+        <a href="https://expressjs.com/" target="_blank" class="skill-card">
+          <i class="devicon-express-original colored"></i><span>Express.js</span>
+        </a>
+        <a href="https://www.mongodb.com/" target="_blank" class="skill-card">
+          <i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
+        </a>
+        <a href="https://www.php.net/" target="_blank" class="skill-card">
+          <i class="devicon-php-plain colored"></i><span>PHP</span>
+        </a>
+        <a href="https://www.cprogramming.com/" target="_blank" class="skill-card">
+          <i class="devicon-c-plain colored"></i><span>C</span>
+        </a>
+        <a href="https://isocpp.org/" target="_blank" class="skill-card">
+          <i class="devicon-cplusplus-plain colored"></i><span>C++</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card hidden">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card tilt">
+          <h3>AI Health Chatbot</h3>
+          <p>React + Node + OpenAI API — public health chatbot prototype.</p>
+        </article>
+        <article class="project-card tilt">
+          <h3>3D Animated Portfolio</h3>
+          <p>Neon 3D UI, tilt cards, & smooth transitions (this site).</p>
+        </article>
+        <article class="project-card tilt">
+          <h3>MERN E-commerce</h3>
+          <p>Complete shop platform — auth, products, cart & admin panel.</p>
+        </article>
+        <article class="project-card tilt">
+          <h3>Furniture Mart</h3>
+          <p>Furniture Mart built with HTML, CSS, JS, PHP & MySQL — includes login, product pages, and checkout.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact & Message -->
+    <section class="contact-wrapper">
+      <section id="contact" class="card hidden">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <p><i class="fas fa-phone ci-icon"></i> +91 9131964236</p>
+          <p><i class="fas fa-envelope ci-icon"></i> 
+            <a href="mailto:amansoni1996@gmail.com">amansoni@gmail.com</a>
+          </p>
+        </div>
+
+        <h3 class="social-title">Follow Me</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/aman-soni0215" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/amansoni0215" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com/am_aman__0215" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+
+      <section id="message" class="card">
+        <h2>Message Me</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="messageText" rows="5" placeholder="Your Message..." required></textarea>
+          <button type="submit" class="cta">Send Message</button>
+        </form>
+        <p id="form-status" class="status-text"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer>© 2025 Aman Soni</footer>
+  <script src="script.js"></script>
+</body>
+</html>

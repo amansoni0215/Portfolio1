@@ -1,0 +1,344 @@
+/* =========================================
+   1️⃣ Google Fonts
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* =========================================
+   2️⃣ Root Variables
+========================================= */
+:root {
+  --bg-1: #030213;
+  --bg-2: #071226;
+  --accent: #00ffc3;
+  --muted: #9aa7b2;
+  --card: #0f1520;
+}
+
+/* =========================================
+   3️⃣ Global Reset
+========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   4️⃣ Body Styles
+========================================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at 10% 10%, #08102a 0%, var(--bg-1) 45%, #020312 100%);
+  color: #eaf6f2;
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+}
+
+/* Light Theme */
+body.light {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  color: #222;
+}
+body.light .card { background: rgba(255,255,255,0.6); color: #222; }
+body.light .nav { background: rgba(255,255,255,0.7); }
+body.light .skill-card { background: rgba(255,255,255,0.8); color: #000; }
+body.light h2 { color: #007a5f; }
+body.light a { color: #007a5f; }
+
+/* =========================================
+   5️⃣ Navigation Bar
+========================================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  backdrop-filter: blur(6px);
+  z-index: 40;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav a:hover { color: var(--accent); }
+.toggle-btn {
+  background: var(--accent);
+  border: none;
+  color: #041017;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* =========================================
+   6️⃣ Hero Section
+========================================= */
+.hero {
+  height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+.hero-inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.profile-3d {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  transform: translateZ(0);
+}
+.photo-wrap {
+  width: 340px;  /* increased from 260px */
+  height: 340px; /* increased from 260px */
+  border-radius: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.45s;
+  box-shadow: 0 15px 60px rgba(0,0,0,0.7);
+}
+
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid rgba(255,255,255,0.08);
+}
+.glow-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 12px rgba(0,255,195,0.12);
+}
+.photo-wrap:hover {
+  transform: rotateY(15deg) rotateX(6deg) translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,255,195,0.08);
+}
+.hero-text .glow {
+  font-size: 2.6rem;
+  color: var(--accent);
+  text-shadow: 0 0 14px rgba(0,255,195,0.22);
+}
+.subtitle { color: var(--muted); margin-top: 6px; }
+.cta {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.25s;
+}
+.cta:hover {
+  background: var(--accent);
+  color: #021017;
+  box-shadow: 0 12px 50px rgba(0,255,195,0.12);
+}
+
+/* =========================================
+   7️⃣ Card & General Sections
+========================================= */
+main {
+  padding: 40px 20px 100px;
+}
+.card {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.02);
+  box-shadow: 0 20px 60px rgba(2,6,23,0.6);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  color: var(--accent);
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px rgba(0,255,195,0.08);
+}
+
+/* =========================================
+   8️⃣ Skills Section
+========================================= */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 18px;
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border: 1px solid rgba(0,255,195,0.06);
+  transition: all 0.36s;
+  box-shadow: 0 8px 30px rgba(0,255,195,0.02);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 60px rgba(0,255,195,0.06);
+}
+.skill-card i { font-size: 34px; color: var(--accent); }
+.skill-card span { font-weight: 700; }
+
+/* =========================================
+   9️⃣ Projects Section
+========================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+.project-card {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border: 1px solid rgba(0,255,195,0.04);
+  transition: transform 0.36s;
+  box-shadow: 0 8px 30px rgba(0,255,195,0.02);
+}
+.project-card:hover {
+  transform: translateY(-8px) rotateY(6deg);
+  box-shadow: 0 24px 70px rgba(0,255,195,0.08);
+}
+
+/* =========================================
+   🔟 Contact + Message Section
+========================================= */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.contact-wrapper .card {
+  flex: 1 1 500px;
+  max-width: 100%;
+}
+
+/* Contact Info */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.contact-grid p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+.ci-icon { color: var(--accent); font-size: 1.2rem; }
+.contact-grid a {
+  text-decoration: none;
+  color: var(--accent);
+}
+.contact-grid a:hover { text-decoration: underline; }
+
+/* Message Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#contact-form input,
+#contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 195, 0.15);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+#contact-form button { align-self: flex-start; }
+.status-text {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* Socials */
+.social-title {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 14px;
+}
+.social-links a {
+  color: var(--accent);
+  font-size: 1.8rem;
+  transition: transform 0.3s, color 0.3s;
+}
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* =========================================
+   1️⃣1️⃣ Footer
+========================================= */
+footer {
+  text-align: center;
+  padding: 28px;
+  color: var(--muted);
+  margin-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+/* =========================================
+   1️⃣2️⃣ Responsive
+========================================= */
+@media (max-width: 880px) {
+  .hero-inner { flex-direction: column; gap: 18px; }
+  .profile-3d { flex-direction: column; }
+  .contact-wrapper { flex-direction: column; align-items: center; }
+}
