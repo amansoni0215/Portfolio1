@@ -13,16 +13,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-left">Aman Soni</div>
-    <div class="nav-right">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button id="themeToggle" class="toggle-btn">🌙</button>
-    </div>
-  </nav>
+ <nav class="nav">
+  <div class="nav-left">Aman Soni</div>
+  
+  <button class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="nav-right" id="nav-menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle" class="toggle-btn">🌙</button>
+  </div>
+</nav>
 
   <header class="hero">
     <div class="hero-inner">
@@ -64,6 +69,9 @@
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-card">
           <i class="devicon-css3-plain colored"></i><span>CSS3</span>
         </a>
+        <a href="https://getbootstrap.com/" target="_blank" class="skill-card">
+          <i class="devicon-bootstrap-plain colored"></i><span>Bootstrap5</span>
+        </a>
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-card">
           <i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
         </a>
@@ -95,22 +103,30 @@
     <section id="projects" class="card hidden">
       <h2>Projects</h2>
       <div class="project-grid">
-        <article class="project-card tilt">
+        <a href="https://amansoni0215.github.io/self-care/" style="text-decoration: none; color: inherit">
+          <article class="project-card tilt">
           <h3>AI Health Chatbot</h3>
           <p>React + Node + OpenAI API — public health chatbot prototype.</p>
         </article>
+        </a>
+         <a href="https://amansoni0215.github.io/Portfolio1/" style="text-decoration: none; color: inherit">
         <article class="project-card tilt">
           <h3>3D Animated Portfolio</h3>
           <p>Neon 3D UI, tilt cards, & smooth transitions (this site).</p>
         </article>
-        <article class="project-card tilt">
+        </a>
+        <a href="https://amansoni0215.github.io/amazon-html-css/" style="text-decoration: none; color: inherit">
+          <article class="project-card tilt">
           <h3>MERN E-commerce</h3>
           <p>Complete shop platform — auth, products, cart & admin panel.</p>
         </article>
+        </a>
+        <a href="https://furnituremart.free.nf/?i=1" style="text-decoration: none; color: inherit">
         <article class="project-card tilt">
           <h3>Furniture Mart</h3>
           <p>Furniture Mart built with HTML, CSS, JS, PHP & MySQL — includes login, product pages, and checkout.</p>
         </article>
+        </a>
       </div>
     </section>
 
