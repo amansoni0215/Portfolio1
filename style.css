@@ -342,3 +342,44 @@ footer {
   .profile-3d { flex-direction: column; }
   .contact-wrapper { flex-direction: column; align-items: center; }
 }
+/* --- Mobile Menu Logic --- */
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 880px) {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-right {
+    display: none; /* Hide the links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--card);
+    width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 195, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 100;
+  }
+
+  /* When JS adds this class, the menu appears */
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-right a {
+    margin: 10px 0;
+  }
+}
