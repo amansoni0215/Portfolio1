@@ -6,7 +6,22 @@ themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('light');
   themeBtn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
 });
+// ===============================
+// 📱 Mobile Menu Toggle
+// ===============================
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-right a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
 
 // ===============================
 // 👀 Reveal sections on scroll
