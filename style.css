@@ -232,6 +232,29 @@ h2 {
   transform: translateY(-8px) rotateY(6deg);
   box-shadow: 0 24px 70px rgba(0,255,195,0.08);
 }
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn.small {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border: 1px solid #00ffcc; /* Matches your neon green */
+  color: #00ffcc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: lowercase; /* Keeps the clean lowercase look */
+}
+
+.btn.small:hover {
+  background: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
 
 /* =========================================
    🔟 Contact + Message Section
@@ -333,36 +356,9 @@ footer {
   margin-top: 28px;
   border-top: 1px solid rgba(255,255,255,0.02);
 }
-/* =========================================
-   1️⃣2️ button github and live demo
-========================================= */
-}
-.project-links {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.btn.small {
-  padding: 5px 12px;
-  font-size: 0.8rem;
-  text-decoration: none;
-  border: 1px solid #00ffcc; /* Matches your neon green */
-  color: #00ffcc;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  text-transform: lowercase; /* Keeps the clean lowercase look */
-}
-
-.btn.small:hover {
-  background: #00ffcc;
-  color: #000;
-  box-shadow: 0 0 10px #00ffcc;
-}
-
 
 /* =========================================
-   1️⃣3️⃣ Responsive
+   1️⃣2️⃣ Responsive
 ========================================= */
 @media (max-width: 880px) {
   .hero-inner { flex-direction: column; gap: 18px; }
@@ -410,4 +406,3 @@ footer {
     margin: 10px 0;
   }
 }
-
